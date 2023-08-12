@@ -54,19 +54,21 @@
     display: flex;
     gap: 2em;
 }
-.card__nomeacao{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
 .card__titulo{
     font-size: 30px;
     font-weight: 700;
+    color: var(--texto-primario);
+    text-decoration: none;
 }
 .card__lista{
     list-style-type: none;
     display: flex;
-    gap: 1.5em;
+    gap: 1em;
+    margin: 1em 0;
+}
+.card__texto{
+    font-size: 16px;
+    font-weight: 400;
 }
 .lista__data{
     font-size: 18px;
@@ -79,6 +81,7 @@
 .lista__categoria{
     font-size: 20px;
     color: var(--texto-terciario);
+    font-weight: 400;
 }
 .rodape{
     text-align: center;
@@ -94,4 +97,6 @@
     font-size: 14px;
     margin-top: 1.5em;
 }
-
+.cabecalho__item:hover{
+    color: var(--fundo-terciario);
+}
