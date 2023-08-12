@@ -27,6 +27,8 @@
 }
 .apresentacao__texto{
     margin: 2.5rem 0;
+    overflow-wrap: break-word;
+    width: 497px;
 }
 .apresentacao__imagem{
     width: 249px;
@@ -99,4 +101,109 @@
 }
 .cabecalho__item:hover{
     color: var(--fundo-terciario);
+}
+.cabecalho__menu-hamburguer{
+    display: none;
+}
+.menu__botao{
+    display: none;
+}
+.lista-menu{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    body{
+        width: 100vw;
+        max-width: 100%;
+    }
+    .cabecalho{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1em;
+    }
+    .cabecalho__item{
+        display: none;
+    }
+    .cabecalho__menu-hamburguer{
+        width: 30px;
+        height: 30px;
+        background-image: url("../assets/menu.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+    }
+    .lista-menu{
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: auto;
+        list-style-type: none;
+    }
+    .menu__botao:checked ~ .lista-menu{
+        display: block;
+    }
+    .lista-menu__item{
+        padding: 1em;
+        background-color: var(--fundo-primario);
+    }
+    .lista-menu__link{
+        color: var(--texto-primario);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .menu__botao{
+        display: none;
+    }
+    .apresentacao{
+        display: block;
+        margin-top: 2em;
+        text-align: center;
+    }
+    .apresentacao__base{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1.5em;
+
+    }
+    .base__nomeacao{
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+    .apresentacao__titulo{
+        font-size: 32px;
+    }
+    .apresentacao__texto{
+        margin: 1.5em 0;
+        padding: 0 1.5em;
+        width: auto;
+    }
+    .apresentacao__imagem{
+        width: 170px;
+        height: 170px;
+    }
+    .apresentacao__botao{
+        margin: 1.5em 0;
+    }
+    .ultimos-projetos{
+        margin: 4.5em 0;
+        padding: 1em 0;
+        text-align: center;
+    }
+    .ultimos-projetos__titulo{
+        font-size: 18px;
+    }
+    .ultimos-projetos__card{
+        display: block;
+        text-align: center;
+    }
+    .card__titulo{
+        font-size: 24px;
+    }
+    .card__lista{
+        justify-content: center;
+    }
 }
